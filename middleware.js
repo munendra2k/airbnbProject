@@ -7,7 +7,7 @@ const { listingSchema, reviewSchema } = require("./schema.js");
 module.exports.isLoggedIn = (req, res, next) => {
   if (!req.isAuthenticated()) {
     //pasport method
-    console.log(`currUser ${req.user}`);
+    // console.log(`currUser ${req.user}`);
     req.session.redirectUrl = req.originalUrl;
     req.flash("error", "you must be logged in to create listings");
     return res.redirect("/login");
