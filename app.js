@@ -20,7 +20,7 @@ const reviewRoute = require("./routes/review.js");
 const userRoute = require("./routes/user.js");
 
 const DB_URL = process.env.ATLASDB_URL;
-// const DB_URI = "mongodb://127.0.0.1:27017/wanderlust";
+const DB_URI = "mongodb://127.0.0.1:27017/wanderlust";
 main()
   .then(() => {
     console.log("connected to DB");
@@ -31,6 +31,7 @@ main()
 
 async function main() {
   await mongoose.connect(DB_URL);
+  // await mongoose.connect(DB_URI);
 }
 
 app.set("view engine", "ejs");
