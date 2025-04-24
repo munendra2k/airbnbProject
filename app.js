@@ -30,8 +30,8 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(DB_URL);
-  // await mongoose.connect(DB_URI);
+  // await mongoose.connect(DB_URL);
+  await mongoose.connect(DB_URI);
 }
 
 app.set("view engine", "ejs");
@@ -42,7 +42,8 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
 const store = MongoStore.create({
-  mongoUrl: DB_URL,
+  // mongoUrl: DB_URL,
+  mongoUrl: DB_URI,
   crypto: {
     secret: process.env.SECRET,
   },

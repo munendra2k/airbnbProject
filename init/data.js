@@ -36,6 +36,13 @@ const sampleListings = [
     price: 1000,
     location: "Aspen",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: {
+        0: 106.5348,
+        1: 38.7946,
+      },
+    },
   },
   {
     title: "Historic Villa in Tuscany",
