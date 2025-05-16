@@ -97,5 +97,6 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error.ejs", { message });
 });
 app.listen(8000, () => {
-  console.log(`server is listening to port 8000`);
+  // console.log(`server is listening to port 8000`);
+  console.log(`http://localhost:8000/listings`);
 });
